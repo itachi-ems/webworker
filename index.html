@@ -24,9 +24,9 @@
            worker.onmessage = function(e){
 
                         
-                        if(typeof(e.data)!='Number')
+                        if(e.data==='DONE')
                         {
-                                    alert(e.data);
+                                    alert("Task completed!");
                         }
                         else
                         {

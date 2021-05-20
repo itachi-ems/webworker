@@ -15,7 +15,7 @@ self.onmessage = (e)=>{
         
 
     }
-    self.postMessage("Task completed successfully");
+    self.postMessage("DONE");
 
 }
 
