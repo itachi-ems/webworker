@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Harsh webworker</title>
+</head>
+
+
+<body>
+
+
+ <input type="number" id="inputData"> <br>
+
+<button onclick="start()">WebWorker</button>
+
+
+<script>
+
+    var worker  = new Worker('worker.js');
+    function start()
+    {
+        var data = document.getElementById('inputData').value;
+        
+        worker.postMessage(data);
+           worker.onmessage = function(e){
+
+                        
+                        if(typeof(e.data)!='Number')
+                        {
+                                    alert(e.data);
+                        }
+                        else
+                        {
+                            console.log(e.data);
+                        }
+                        
+             }
+
+
+
+
+
+    }
+
+
+ 
+
+
+
+
+</script>
+
+    
+</body>
+</html>
